@@ -1,0 +1,7 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" fill="#193E35"/>
+  <rect x="80" y="80" width="1120" height="560" rx="28" fill="#0F2221" stroke="#D0A476" stroke-width="8"/>
+  <circle cx="640" cy="360" r="118" fill="#D0A476"/>
+  <path d="M603 296L726 360L603 424V296Z" fill="#0F2221"/>
+  <text x="80" y="120" fill="#DDE6E3" font-size="34" font-family="Arial">Local / External File Preview</text>
+</svg>

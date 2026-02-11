@@ -1,0 +1,8 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" fill="#163933"/>
+  <rect x="88" y="88" width="1104" height="544" rx="28" fill="#0F2221" stroke="#D0A476" stroke-width="8"/>
+  <circle cx="640" cy="360" r="112" fill="#D0A476"/>
+  <path d="M604 301L720 360L604 419V301Z" fill="#0F2221"/>
+  <text x="120" y="150" fill="#DDE6E3" font-size="46" font-family="Arial">Local File Thumbnail</text>
+  <text x="120" y="205" fill="#DDE6E3" font-size="28" font-family="Arial">/public/images/thumbnail/file-placeholder.svg</text>
+</svg>

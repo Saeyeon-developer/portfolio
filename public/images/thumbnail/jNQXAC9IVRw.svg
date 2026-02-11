@@ -1,0 +1,15 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="160" y1="110" x2="1120" y2="610" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D0A476"/>
+      <stop offset="1" stop-color="#BE5E3C"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="#102321"/>
+  <rect x="84" y="84" width="1112" height="552" rx="30" fill="url(#g)"/>
+  <rect x="120" y="120" width="1040" height="480" rx="22" fill="#122D2A" fill-opacity="0.8"/>
+  <circle cx="640" cy="360" r="110" fill="#D0A476"/>
+  <path d="M607 302L721 360L607 418V302Z" fill="#0F2221"/>
+  <text x="140" y="180" fill="#EAF0EE" font-size="44" font-family="Arial">YouTube Thumbnail (Local)</text>
+  <text x="140" y="238" fill="#EAF0EE" font-size="32" font-family="Arial">jNQXAC9IVRw</text>
+</svg>
