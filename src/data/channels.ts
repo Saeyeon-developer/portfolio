@@ -66,17 +66,26 @@ export const channels: Channel[] = [
     videos: [
       {
         type: "youtube",
-        title: "15초 모션 캠페인 리캡",
-        thumbnail: "/images/thumbnail/ysz5S6PUM-U.svg",
-        src: "ysz5S6PUM-U",
+        title: "한잔줍쇼 시리즈",
+        thumbnail: "/images/thumbnail/seoulsungyu_1.jpg",
+        src: "https://youtu.be/u9UzK3JzN4w?si=XOYrZHxuA1NT-i76",
         date: "2025-11-30",
+        note: "다른 채널보다 훨씬 자유롭고 원하는대로 영상을 제작하는 채널입니다."
+      },
+      {
+        type: "youtube",
+        title: "대기업 브랜디드 콘텐츠",
+        thumbnail: "/images/thumbnail/seoulsungyu_2.jpg",
+        src: "https://www.youtube.com/watch?v=apf474bQozE",
+        date: "2025-09-10",
+        note: "주류 상품이므로 유튜브 연령 제한이 있습니다."
       },
       {
         type: "file",
-        title: "브랜드 키비주얼 확장 시퀀스",
-        thumbnail: "/images/thumbnail/file-placeholder.svg",
-        src: "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
-        date: "2025-09-10"
+        title: "채널 핸들링 인증 메일함",
+        thumbnail: "/images/thumbnail/seoulsungyu_3.png",
+        src: "",
+        note: "실제로 여러 대기업들과 콜라보 콘텐츠를 진행하였습니다."
       }
     ]
   },

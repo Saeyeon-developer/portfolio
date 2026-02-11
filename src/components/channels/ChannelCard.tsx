@@ -11,6 +11,7 @@ type ChannelCardProps = {
 
 export function ChannelCard({ channel, viewMode, onPlay }: ChannelCardProps) {
   const representative = channel.videos[0];
+  const isPicture = representative.type === "picture";
 
   return (
     <article
@@ -30,10 +31,10 @@ export function ChannelCard({ channel, viewMode, onPlay }: ChannelCardProps) {
           <button
             type="button"
             onClick={() => onPlay(channel)}
-            aria-label={`${channel.title} 대표작 재생`}
+            aria-label={`${channel.title} 대표작 ${isPicture ? "보기" : "재생"}`}
             className="absolute inset-x-3 bottom-3 rounded-lg bg-black/75 px-3 py-2 text-sm font-medium text-white transition hover:bg-black"
           >
-            대표작 1개 재생
+            대표작 {isPicture ? "보기" : "1개 재생"}
           </button>
         </div>
       </div>

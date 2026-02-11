@@ -1,8 +1,8 @@
 export type VideoItem = {
-  type: "youtube" | "file";
+  type: "youtube" | "file" | "picture";
   title: string;
   thumbnail: string;
-  // youtube: videoId or full URL, file: mp4 URL or /public/videos/... path
+  // youtube: videoId or full URL, file: mp4 URL or /public/videos/... path, picture: image URL or /public/images/... path
   src: string;
   date?: string;
   note?: string;

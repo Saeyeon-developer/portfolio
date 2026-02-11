@@ -71,9 +71,9 @@ export function ChannelDetailClient({ channel }: ChannelDetailClientProps) {
                   type="button"
                   onClick={() => setSelectedVideo(video)}
                   className="shrink-0 rounded-full bg-pine px-3 py-1.5 text-xs font-semibold text-white"
-                  aria-label={`${video.title} 재생`}
+                  aria-label={`${video.title} ${video.type === "picture" ? "보기" : "재생"}`}
                 >
-                  재생
+                  {video.type === "picture" ? "보기" : "재생"}
                 </button>
               </div>
               {video.note ? <p className="mt-2 text-sm text-ink/70 dark:text-mist/70">{video.note}</p> : null}

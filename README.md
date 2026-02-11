@@ -19,7 +19,7 @@
 - 상단 고정 Header + Footer
 - 다크모드 토글(클라이언트 상태 + localStorage)
 - Channels 아카이브 검색/필터/정렬/리스트-그리드 전환
-- 대표작 재생 모달(YouTube embed / HTML5 video)
+- 대표작 모달(YouTube embed / HTML5 video / picture 확대 보기)
 - 모달 접근성: ESC 닫기, 바깥 클릭 닫기, 포커스 제어, 스크롤 잠금
 - Extras 이미지 라이트박스
 - 페이지별 metadata + `channels/[slug]` 동적 metadata
@@ -45,10 +45,10 @@ npm run start
 - 비디오 타입:
 ```ts
 {
-  type: "youtube" | "file";
+  type: "youtube" | "file" | "picture";
   title: string;
   thumbnail: string;
-  src: string; // youtube: videoId or full URL, file: mp4 URL or /public/videos/...
+  src: string; // youtube: videoId/full URL, file: mp4 URL, picture: image URL
   date?: string;
   note?: string;
 }
@@ -68,8 +68,9 @@ npm run start
 3. 채널 썸네일은 `public/images/thumbnail`에 넣고 `thumbnail` 값을 `/images/thumbnail/파일명`으로 지정합니다.
 4. youtube 타입 영상은 `src`에 videoId 또는 유튜브 전체 URL을 입력할 수 있습니다.
 5. file 타입 영상은 `public/videos/...` 또는 외부 mp4 URL을 `src`에 입력합니다.
-6. `src/data/extras.ts`에 항목 추가 후 `public/images`에 이미지 파일을 넣습니다.
-7. `src/data/skills.ts`에서 카테고리별 기술 목록을 수정합니다.
+6. picture 타입 항목은 `src`에 확대할 이미지 경로(`/public/images/...`)를 입력합니다.
+7. `src/data/extras.ts`에 항목 추가 후 `public/images`에 이미지 파일을 넣습니다.
+8. `src/data/skills.ts`에서 카테고리별 기술 목록을 수정합니다.
 
 ## Component Split
 - Layout: `Header`, `Footer`, `ThemeToggle`, `ClientProviders`

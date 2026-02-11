@@ -80,6 +80,7 @@ export function VideoModal({ isOpen, video, onClose }: VideoModalProps) {
   }
 
   const isYouTube = video.type === "youtube";
+  const isPicture = video.type === "picture";
   const youtubeId = isYouTube ? extractYouTubeVideoId(video.src) : null;
 
   return (
@@ -92,7 +93,7 @@ export function VideoModal({ isOpen, video, onClose }: VideoModalProps) {
         ref={panelRef}
         role="dialog"
         aria-modal="true"
-        aria-label={`${video.title} video preview`}
+        aria-label={`${video.title} media preview`}
         className="w-full max-w-4xl rounded-2xl bg-ink/95 p-4 text-mist shadow-2xl"
         onMouseDown={(event) => event.stopPropagation()}
       >
@@ -103,7 +104,7 @@ export function VideoModal({ isOpen, video, onClose }: VideoModalProps) {
           </div>
           <button
             type="button"
-            aria-label="Close video modal"
+            aria-label="Close media modal"
             onClick={onClose}
             className="rounded-full border border-white/20 px-3 py-1.5 text-xs uppercase tracking-[0.12em]"
           >
@@ -124,6 +125,13 @@ export function VideoModal({ isOpen, video, onClose }: VideoModalProps) {
             <div className="flex h-full w-full items-center justify-center px-6 text-center text-sm text-mist/80">
               유효한 YouTube 링크(videoId 또는 전체 URL)를 입력해주세요.
             </div>
+          ) : isPicture ? (
+            <div
+              role="img"
+              aria-label={video.title}
+              className="h-full w-full bg-contain bg-center bg-no-repeat"
+              style={{ backgroundImage: `url(${video.src})` }}
+            />
           ) : (
             <video src={video.src} controls autoPlay playsInline className="h-full w-full" />
           )}
