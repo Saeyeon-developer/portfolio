@@ -20,7 +20,7 @@ export function Header() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-black/10 bg-mist/75 backdrop-blur-md dark:border-white/10 dark:bg-ink/70">
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center gap-3 px-4 sm:px-6 lg:px-8">
         <Link href="/" className="shrink-0 text-sm font-extrabold uppercase tracking-[0.24em]">
-          Jae Portfolio
+          Jaewon Portfolio
         </Link>
 
         <nav className="ml-auto hidden items-center gap-1 md:flex">

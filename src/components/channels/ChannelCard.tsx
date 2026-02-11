@@ -15,10 +15,16 @@ export function ChannelCard({ channel, viewMode, onPlay }: ChannelCardProps) {
 
   return (
     <article
-      className={`panel overflow-hidden p-4 ${
+      className={`panel group relative overflow-hidden p-4 ${
         viewMode === "list" ? "flex flex-col gap-4 sm:flex-row" : "flex flex-col"
       }`}
     >
+      <Link
+        href={`/channels/${channel.slug}`}
+        aria-label={`${channel.title} 상세 보기`}
+        className="absolute inset-0 z-20 rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sunset"
+      />
+
       <div className={`${viewMode === "list" ? "sm:w-72" : "w-full"}`}>
         <div className="relative aspect-video overflow-hidden rounded-xl border border-black/10 dark:border-white/10">
           <Image
@@ -32,7 +38,7 @@ export function ChannelCard({ channel, viewMode, onPlay }: ChannelCardProps) {
             type="button"
             onClick={() => onPlay(channel)}
             aria-label={`${channel.title} 대표작 ${isPicture ? "보기" : "재생"}`}
-            className="absolute inset-x-3 bottom-3 rounded-lg bg-black/75 px-3 py-2 text-sm font-medium text-white transition hover:bg-black"
+            className="absolute inset-x-3 bottom-3 z-30 rounded-lg bg-black/75 px-3 py-2 text-sm font-medium text-white transition hover:bg-black"
           >
             대표작 {isPicture ? "보기" : "1개 재생"}
           </button>
@@ -60,12 +66,9 @@ export function ChannelCard({ channel, viewMode, onPlay }: ChannelCardProps) {
 
         <div className="mt-auto flex items-center justify-between">
           <p className="text-xs uppercase tracking-[0.08em] text-ink/60 dark:text-mist/60">Updated {channel.updatedAt}</p>
-          <Link
-            href={`/channels/${channel.slug}`}
-            className="rounded-full border border-black/15 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] transition hover:-translate-y-0.5 dark:border-white/20"
-          >
+          <span className="rounded-full border border-black/15 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] transition group-hover:-translate-y-0.5 dark:border-white/20">
             상세 보기
-          </Link>
+          </span>
         </div>
       </div>
     </article>

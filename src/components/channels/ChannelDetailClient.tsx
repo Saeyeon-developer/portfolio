@@ -51,20 +51,29 @@ export function ChannelDetailClient({ channel }: ChannelDetailClientProps) {
         <div className="grid gap-4 md:grid-cols-2">
           {sortedVideos.map((video) => (
             <article key={`${video.title}-${video.src}`} className="panel overflow-hidden p-4">
-              <div className="relative aspect-video overflow-hidden rounded-xl">
+              <button
+                type="button"
+                onClick={() => setSelectedVideo(video)}
+                aria-label={`${video.title} ${video.type === "picture" ? "보기" : "재생"}`}
+                className="relative block aspect-video w-full overflow-hidden rounded-xl"
+              >
                 <Image
                   src={video.thumbnail}
                   alt={video.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
+                  className="object-cover transition hover:scale-[1.02]"
                 />
-              </div>
+              </button>
               <div className="mt-3 flex items-start justify-between gap-4">
                 <div>
                   <h3 className="font-semibold">{video.title}</h3>
-                  {video.date ? (
-                    <p className="text-xs text-ink/60 dark:text-mist/60">{video.date}</p>
+                  {video.date || video.contribution ? (
+                    <p className="text-xs text-ink/60 dark:text-mist/60">
+                      {video.date ? <span>{video.date}</span> : null}
+                      {video.date && video.contribution ? <span className="mx-1">·</span> : null}
+                      {video.contribution ? <span>{video.contribution}</span> : null}
+                    </p>
                   ) : null}
                 </div>
                 <button

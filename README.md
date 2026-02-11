@@ -48,8 +48,10 @@ npm run start
   type: "youtube" | "file" | "picture";
   title: string;
   thumbnail: string;
-  src: string; // youtube: videoId/full URL, file: mp4 URL, picture: image URL
+  src: string; // youtube: videoId/full URL, file: mp4 URL, picture: fallback image URL
+  images?: string[]; // picture 타입에서 여러 장을 넘겨볼 때 사용
   date?: string;
+  contribution?: string; // date 옆에 표시되는 기여도/역할 정보
   note?: string;
 }
 ```
@@ -68,7 +70,7 @@ npm run start
 3. 채널 썸네일은 `public/images/thumbnail`에 넣고 `thumbnail` 값을 `/images/thumbnail/파일명`으로 지정합니다.
 4. youtube 타입 영상은 `src`에 videoId 또는 유튜브 전체 URL을 입력할 수 있습니다.
 5. file 타입 영상은 `public/videos/...` 또는 외부 mp4 URL을 `src`에 입력합니다.
-6. picture 타입 항목은 `src`에 확대할 이미지 경로(`/public/images/...`)를 입력합니다.
+6. picture 타입 항목은 `images` 배열로 여러 이미지 경로를 입력할 수 있습니다. (`src`는 폴백 1장)
 7. `src/data/extras.ts`에 항목 추가 후 `public/images`에 이미지 파일을 넣습니다.
 8. `src/data/skills.ts`에서 카테고리별 기술 목록을 수정합니다.
 

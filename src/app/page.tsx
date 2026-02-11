@@ -48,7 +48,12 @@ export default function HomePage() {
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {featuredChannels.slice(0, 12).map((channel) => (
-            <article key={channel.slug} className="panel overflow-hidden p-3">
+            <Link
+              key={channel.slug}
+              href={`/channels/${channel.slug}`}
+              className="panel block overflow-hidden p-3 transition hover:-translate-y-0.5"
+              aria-label={`${channel.title} 상세 보기`}
+            >
               <div className="relative aspect-video overflow-hidden rounded-lg">
                 <Image
                   src={channel.videos[0].thumbnail}
@@ -60,10 +65,10 @@ export default function HomePage() {
               </div>
               <h3 className="mt-3 text-lg font-semibold">{channel.title}</h3>
               <p className="mt-1 line-clamp-2 text-sm text-ink/70 dark:text-mist/70">{channel.summary}</p>
-              <Link href={`/channels/${channel.slug}`} className="mt-3 inline-block text-sm font-semibold text-sunset">
+              <span className="mt-3 inline-block text-sm font-semibold text-sunset">
                 상세 보기 →
-              </Link>
-            </article>
+              </span>
+            </Link>
           ))}
         </div>
       </section>

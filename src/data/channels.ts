@@ -40,7 +40,8 @@ export const channels: Channel[] = [
         thumbnail: "/images/thumbnail/nugulmon_1.jpg",
         src: "https://youtu.be/xuNrxcT1mgY?si=kCJ8N_v6_WlRZYBG",
         date: "2026-02-07",
-        note: "기여도: 촬영 100%, 편집 100%, 기획 50%"
+        note: "기부를 동반한 공동구매 프로젝트",
+        contribution: "기여도: 촬영 100%, 편집 100%, 기획 50%"
       },
       {
         type: "file",
@@ -69,7 +70,8 @@ export const channels: Channel[] = [
         title: "한잔줍쇼 시리즈",
         thumbnail: "/images/thumbnail/seoulsungyu_1.jpg",
         src: "https://youtu.be/u9UzK3JzN4w?si=XOYrZHxuA1NT-i76",
-        date: "2025-11-30",
+        date: "2024-03-02",
+        contribution: "기여도: 촬영 100%, 편집 100%, 썸네일 100% 기획 50%",
         note: "다른 채널보다 훨씬 자유롭고 원하는대로 영상을 제작하는 채널입니다."
       },
       {
@@ -77,84 +79,88 @@ export const channels: Channel[] = [
         title: "대기업 브랜디드 콘텐츠",
         thumbnail: "/images/thumbnail/seoulsungyu_2.jpg",
         src: "https://www.youtube.com/watch?v=apf474bQozE",
-        date: "2025-09-10",
+        date: "2025-09-05",
+        contribution: "기여도: 촬영 100%, 편집 100%, 썸네일 100% 기획 50%",
         note: "주류 상품이므로 유튜브 연령 제한이 있습니다."
       },
       {
-        type: "file",
+        type: "picture",
         title: "채널 핸들링 인증 메일함",
         thumbnail: "/images/thumbnail/seoulsungyu_3.png",
-        src: "",
+        src: "/images/thumbnail/seoulsungyu_3.png",
         note: "실제로 여러 대기업들과 콜라보 콘텐츠를 진행하였습니다."
       }
     ]
   },
   {
-    slug: "creator-podcast-room",
-    title: "Creator Podcast Room",
-    summary: "크리에이터 인터뷰 팟캐스트와 하이라이트 클립 운영",
-    description: "긴 호흡의 토크를 챕터링하고, 클립 재가공으로 유입 경로를 확장했습니다.",
+    slug: "nagne",
+    title: "Nagne (나그네)",
+    summary: "밈 채널의 퍼포먼스 실험 채널",
+    description: "해외 시청자를 대상으로 얼마나 먹힐 수 있는지를 자체 시험하는 프로젝트 채널",
     role: "Editor",
-    period: "2023.11 - 2025.10",
-    kpi: ["월간 청취자 18만", "클립 전환 유입 31%", "댓글 참여율 6.4%"],
+    period: "2021.12 - 2025.12",
+    kpi: ["구독자 200만", "총 조회수: 7억"],
     tags: ["Podcast", "Interview", "Shorts"],
-    updatedAt: "2025-10-22",
+    updatedAt: "2021-10-22",
     recommendedRank: 4,
     performanceScore: 90,
     videos: [
       {
         type: "youtube",
-        title: "AI 시대 크리에이터 생존 전략",
-        thumbnail: "/images/thumbnail/ScMzIvxBSi4.svg",
-        src: "ScMzIvxBSi4",
-        date: "2025-10-22"
+        title: "meme 시장의 이해도",
+        thumbnail: "/images/thumbnail/nagne_1.png",
+        src: "https://youtube.com/shorts/r1SACy3lx-E?si=kdS3DQLEIS38b02j",
+        date: "2022-02-03",
+        contribution: "기여도: 편집 100%",
       },
       {
         type: "youtube",
-        title: "클립 하이라이트 묶음",
-        thumbnail: "/images/thumbnail/tgbNymZ7vqY.svg",
-        src: "tgbNymZ7vqY",
-        date: "2025-08-30"
+        title: "언리얼엔진4까지 활용했던 프로젝트",
+        thumbnail: "/images/thumbnail/nagne_2.jpg",
+        src: "https://youtu.be/7uxq5dy1e3s?si=TCshUIOd0d0699vP",
+        date: "2021-12-14",
+        contribution: "기여도: 편집 100%",
       }
     ]
   },
   {
-    slug: "devlog-theatre",
-    title: "Devlog Theatre",
-    summary: "개발 과정을 스토리텔링으로 편집한 기술 채널",
-    description: "튜토리얼 중심의 긴 영상을 시리즈 구조로 기획하고 썸네일/챕터 실험을 진행했습니다.",
+    slug: "loony-bloxy",
+    title: "Loony Bloxy",
+    summary: "AI 영상 해외 프로젝트",
+    description: "AI 기술을 활용하여 운영했던 해외 채널",
     role: "Developer",
     period: "2024.01 - 진행중",
-    kpi: ["구독자 4.8만", "평균 재방문율 42%", "강의 전환 매출 월 1,200만원"],
+    kpi: ["개설 20일 유효 조회수 1000만 돌파", "수익 창출 1개월만에 성공"],
     tags: ["Tutorial", "Livestream", "Documentary"],
     updatedAt: "2025-12-01",
     recommendedRank: 3,
     performanceScore: 93,
     videos: [
       {
-        type: "youtube",
-        title: "Next.js App Router 실전 구축기",
-        thumbnail: "/images/thumbnail/jNQXAC9IVRw.svg",
-        src: "jNQXAC9IVRw",
-        date: "2025-12-01"
+        type: "picture",
+        title: "수익 창출 인증",
+        thumbnail: "/images/thumbnail/loony_1.png",
+        src: "/images/thumbnail/loony_1.png",
+        date: "2026-01-30"
       },
       {
-        type: "file",
-        title: "강의 프리뷰 컷",
-        thumbnail: "/images/thumbnail/file-placeholder.svg",
-        src: "https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-        date: "2025-09-02"
+        type: "picture",
+        title: "중간 성과 지표들",
+        thumbnail: "/images/thumbnail/loony_2.png",
+        src: "/images/thumbnail/loony_2.png",
+        images: ["/images/thumbnail/loony_2.png", "/images/thumbnail/loony_3.png", "/images/thumbnail/loony_4.png"],
+        date: "2026-02-02"
       }
     ]
   },
   {
-    slug: "brand-lab-live",
-    title: "Brand Lab Live",
-    summary: "라이브 형식으로 진행되는 브랜드 리뷰 및 제작기",
-    description: "주간 라이브 운영 프로세스를 구축하고, 라이브 이후 VOD 전환 편집을 담당했습니다.",
+    slug: "parkholmes",
+    title: "박홈즈",
+    summary: "AI를 활용한 상황극 콘텐츠",
+    description: "2025년 세계적으로 브레인롯 붐이 일어났을 때, AI로 시도해본 채널입니다.",
     role: "Creative Director",
-    period: "2024.05 - 2025.09",
-    kpi: ["라이브 평균 동시 시청 3,200", "VOD 전환율 64%", "스폰서 만족도 4.7/5"],
+    period: "2025.09 - 2026.01",
+    kpi: ["수익 창출 90일만에 성공, 구독자 6.5만, 총 조회수 2500만"],
     tags: ["Livestream", "Brand", "Campaign"],
     updatedAt: "2025-09-19",
     recommendedRank: 5,
@@ -162,24 +168,28 @@ export const channels: Channel[] = [
     videos: [
       {
         type: "youtube",
-        title: "브랜드 런칭 라이브 하이라이트",
-        thumbnail: "/images/thumbnail/mRf3-JkwqfU.svg",
-        src: "mRf3-JkwqfU",
-        date: "2025-09-19"
+        title: "블록블라스트(게임) 콜라보 콘텐츠",
+        thumbnail: "/images/thumbnail/parkholmes_1.jpg",
+        src: "https://youtube.com/shorts/5Cm-A5mAMxs?si=Sm9zDFjfcXWIjneF",
+        date: "2025-11-28",
+        contribution: "기여도: 편집 100%, AI: 100%",
+        note: "광고 영상임에도 590만 조회수"
       },
       {
-        type: "file",
-        title: "라이브 오프닝 타이틀",
-        thumbnail: "/images/thumbnail/file-placeholder.svg",
-        src: "https://storage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
-        date: "2025-07-15"
+        type: "youtube",
+        title: "기본적인 AI 활용",
+        thumbnail: "/images/thumbnail/parkholmes_2.jpg",
+        src: "https://youtube.com/shorts/oRERVm9naOI?si=-cLTXXRTltRH7SQo",
+        date: "2025-10-17",
+        contribution: "기여도: 편집 100%, AI: 100%",
+        note: "AI의 기본 Veo, Nanobanana 활용"
       }
     ]
   },
   {
-    slug: "shortform-playbook",
-    title: "Shortform Playbook",
-    summary: "포맷 테스트를 중심으로 숏폼 제작 실험을 기록",
+    slug: "trot",
+    title: "다함께 트로트",
+    summary: "Suno AI를 활용한 음원 콘텐츠",
     description: "동일 원본을 다양한 후킹 구조로 편집해 성과 차이를 검증했습니다.",
     role: "Editor",
     period: "2025.01 - 진행중",
@@ -206,10 +216,10 @@ export const channels: Channel[] = [
     ]
   },
   {
-    slug: "insight-weekly",
-    title: "Insight Weekly",
-    summary: "업계 트렌드 인사이트를 주간 브리핑 형태로 전달",
-    description: "리서치 자료를 빠르게 시각화하고 주간 리포트 영상 제작 파이프라인을 운영했습니다.",
+    slug: "neoguri",
+    title: "너굴이",
+    summary: "직접적인 참여가 있었던 채널은 아닙니다. 연관 채널입니다.",
+    description: "해당 채널은 자문 역할만 수행하였습니다.",
     role: "Producer",
     period: "2023.09 - 2025.12",
     kpi: ["주간 조회수 평균 22만", "뉴스레터 전환 11%", "평균 완주율 43%"],
@@ -235,12 +245,12 @@ export const channels: Channel[] = [
     ]
   },
   {
-    slug: "campaign-docs",
-    title: "Campaign Docs",
+    slug: "artist-noob",
+    title: "Noob (아티스트 눕)",
     summary: "브랜드 캠페인 과정을 기록한 비하인드 아카이브",
     description: "캠페인 전개 과정과 성과 데이터를 다큐 시리즈로 재구성했습니다.",
     role: "Creative Director",
-    period: "2024.02 - 2025.08",
+    period: "2026.02 - ing",
     kpi: ["캠페인 총 도달 3,400만", "브랜드 검색량 +54%", "재의뢰 9건"],
     tags: ["Campaign", "Documentary", "Brand"],
     updatedAt: "2025-08-22",

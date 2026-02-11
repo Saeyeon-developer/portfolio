@@ -1,12 +1,30 @@
-export type VideoItem = {
-  type: "youtube" | "file" | "picture";
+type BaseMediaItem = {
   title: string;
   thumbnail: string;
-  // youtube: videoId or full URL, file: mp4 URL or /public/videos/... path, picture: image URL or /public/images/... path
-  src: string;
   date?: string;
   note?: string;
+  contribution?: string;
 };
+
+export type YouTubeItem = BaseMediaItem & {
+  type: "youtube";
+  src: string;
+};
+
+export type FileItem = BaseMediaItem & {
+  type: "file";
+  src: string;
+};
+
+export type PictureItem = BaseMediaItem & {
+  type: "picture";
+  // Backward-compatible single source. Used when images is omitted.
+  src: string;
+  // Multi-image source list for carousel in modal.
+  images?: string[];
+};
+
+export type VideoItem = YouTubeItem | FileItem | PictureItem;
 
 export type ChannelTag =
   | "Brand"
