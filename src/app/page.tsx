@@ -18,10 +18,10 @@ export default function HomePage() {
       <section className="panel relative overflow-hidden bg-hero-glow p-8 sm:p-12">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sunset">Portfolio Snapshot</p>
         <h1 className="mt-4 max-w text-4xl font-bold tracking-tight sm:text-5xl">
-          영상 제작부터 간단한 홈페이지 구현까지 <br />크리에이터 &quot;이재원&quot; 입니다.
+          영상 제작부터 간단한 코딩 구현까지 <br />크리에이터 &quot;이재원&quot; 입니다.
         </h1>
         <p className="mt-4 max-w-2xl text-base text-ink/75 dark:text-mist/75">
-          채널 운영, 여러 활동, 시장 전략을 중심으로 작업한 대표작들을 아카이브했습니다. 여기에서 제 프로젝트 및 채널별 대표작과 성과를 빠르게 알아보세요.
+          저의 활동 중 대표적인 것들을 아카이브했습니다. 여기에서 제 프로젝트 및 채널별 대표작과 성과를 빠르게 알아보세요.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <Link
@@ -88,7 +88,13 @@ export default function HomePage() {
         <div className="grid gap-4 md:grid-cols-3">
           {extras.slice(0, 3).map((item) => (
             <article key={item.id} className="panel overflow-hidden p-3">
-              <Image src={item.image} alt={item.title} width={640} height={256} className="h-40 w-full rounded-lg object-cover" />
+              <Image
+                src={item.images?.[0] ?? item.image}
+                alt={item.title}
+                width={640}
+                height={256}
+                className="h-40 w-full rounded-lg object-cover"
+              />
               <h3 className="mt-3 text-lg font-semibold">{item.title}</h3>
               <p className="mt-1 text-sm text-ink/70 dark:text-mist/70">{item.description}</p>
             </article>

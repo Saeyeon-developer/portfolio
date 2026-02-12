@@ -59,6 +59,17 @@ npm run start
 ### 2) Extras
 - 파일: `src/data/extras.ts`
 - 타입: `ExtraItem`
+```ts
+{
+  id: string;
+  title: string;
+  description: string;
+  image: string; // 폴백 단일 이미지
+  images?: string[]; // 라이트박스 좌우 넘김용 다중 이미지
+  date: string;
+  note: string;
+}
+```
 
 ### 3) Skills
 - 파일: `src/data/skills.ts`
@@ -70,9 +81,17 @@ npm run start
 3. 채널 썸네일은 `public/images/thumbnail`에 넣고 `thumbnail` 값을 `/images/thumbnail/파일명`으로 지정합니다.
 4. youtube 타입 영상은 `src`에 videoId 또는 유튜브 전체 URL을 입력할 수 있습니다.
 5. file 타입 영상은 `public/videos/...` 또는 외부 mp4 URL을 `src`에 입력합니다.
+   - Vercel Blob을 쓰면 두 가지 방식이 가능합니다.
+     - 전체 URL: `https://<store-id>.public.blob.vercel-storage.com/.../video.mp4`
+     - shorthand: `blob:videos/video.mp4` (아래 환경변수 필요)
 6. picture 타입 항목은 `images` 배열로 여러 이미지 경로를 입력할 수 있습니다. (`src`는 폴백 1장)
-7. `src/data/extras.ts`에 항목 추가 후 `public/images`에 이미지 파일을 넣습니다.
+7. `src/data/extras.ts`의 `images` 배열에 여러 이미지를 넣으면 라이트박스에서 좌우 넘김이 가능합니다. (`image`는 폴백)
 8. `src/data/skills.ts`에서 카테고리별 기술 목록을 수정합니다.
+
+## Environment Variables
+- `NEXT_PUBLIC_BLOB_BASE_URL`
+  - 예: `https://<store-id>.public.blob.vercel-storage.com`
+  - 설정하면 `blob:videos/sample.mp4` 형태를 자동으로 Blob URL로 변환합니다.
 
 ## Component Split
 - Layout: `Header`, `Footer`, `ThemeToggle`, `ClientProviders`

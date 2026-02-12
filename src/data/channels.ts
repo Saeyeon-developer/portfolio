@@ -103,7 +103,7 @@ export const channels: Channel[] = [
     tags: ["Podcast", "Interview", "Shorts"],
     updatedAt: "2021-10-22",
     recommendedRank: 4,
-    performanceScore: 90,
+    performanceScore: 94,
     videos: [
       {
         type: "youtube",
@@ -128,8 +128,8 @@ export const channels: Channel[] = [
     title: "Loony Bloxy",
     summary: "AI 영상 해외 프로젝트",
     description: "AI 기술을 활용하여 운영했던 해외 채널",
-    role: "Developer",
-    period: "2024.01 - 진행중",
+    role: "Producer",
+    period: "2025.12 - 진행중",
     kpi: ["개설 20일 유효 조회수 1000만 돌파", "수익 창출 1개월만에 성공"],
     tags: ["Tutorial", "Livestream", "Documentary"],
     updatedAt: "2025-12-01",
@@ -150,6 +150,23 @@ export const channels: Channel[] = [
         src: "/images/thumbnail/loony_2.png",
         images: ["/images/thumbnail/loony_2.png", "/images/thumbnail/loony_3.png", "/images/thumbnail/loony_4.png"],
         date: "2026-02-02"
+      },
+      {
+        type: "file",
+        title: "Game vs Real",
+        thumbnail: "",
+        src:"https://rthww4xn4lzutlkr.public.blob.vercel-storage.com/Loonybloxy_1.mp4",
+        date: "2026-01-21",
+        contribution: "편집 100%, AI 100%"
+      },
+      {
+        type: "file",
+        title: "순수 창작 애니메이션",
+        thumbnail: "",
+        src:"https://rthww4xn4lzutlkr.public.blob.vercel-storage.com/Loonybloxy_2.mp4",
+        date: "2026-01-21",
+        note: "상용화 되어 있는 거의 모든 AI가 활용되었습니다.",
+        contribution: "편집 100%, AI 100%"
       }
     ]
   },
@@ -158,13 +175,13 @@ export const channels: Channel[] = [
     title: "박홈즈",
     summary: "AI를 활용한 상황극 콘텐츠",
     description: "2025년 세계적으로 브레인롯 붐이 일어났을 때, AI로 시도해본 채널입니다.",
-    role: "Creative Director",
+    role: "Editor",
     period: "2025.09 - 2026.01",
     kpi: ["수익 창출 90일만에 성공, 구독자 6.5만, 총 조회수 2500만"],
     tags: ["Livestream", "Brand", "Campaign"],
     updatedAt: "2025-09-19",
     recommendedRank: 5,
-    performanceScore: 88,
+    performanceScore: 90,
     videos: [
       {
         type: "youtube",
@@ -190,39 +207,39 @@ export const channels: Channel[] = [
     slug: "trot",
     title: "다함께 트로트",
     summary: "Suno AI를 활용한 음원 콘텐츠",
-    description: "동일 원본을 다양한 후킹 구조로 편집해 성과 차이를 검증했습니다.",
+    description: "Suno를 통해 자체 생산한 노래로 운영되는 음원 채널 입니다.",
     role: "Editor",
-    period: "2025.01 - 진행중",
-    kpi: ["실험 포맷 52개", "최고 조회수 640만", "평균 도달 성장 180%"],
+    period: "2025.11 - 진행중",
+    kpi: ["총 조회수: 2000만, 자체 음원 저작권 보유"],
     tags: ["Shorts", "Tutorial", "Campaign"],
     updatedAt: "2025-12-10",
     recommendedRank: 6,
-    performanceScore: 94,
+    performanceScore: 87,
     videos: [
       {
         type: "youtube",
-        title: "0.8초 후킹 실험 리포트",
-        thumbnail: "/images/thumbnail/aqz-KE-bpKQ.svg",
-        src: "aqz-KE-bpKQ",
-        date: "2025-12-10"
+        title: "순수 음원 콘텐츠",
+        thumbnail: "/images/thumbnail/trot_1.jpg",
+        src: "https://youtu.be/r8xKwMRdTF4?si=_ZwMFBS4Oa5blynR",
+        date: "2026-02-01"
       },
       {
-        type: "file",
-        title: "숏폼 자막 템플릿 예시",
-        thumbnail: "/images/thumbnail/file-placeholder.svg",
-        src: "https://storage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
-        date: "2025-11-01"
+        type: "youtube",
+        title: "숏폼으로 캐릭터 AI(립싱크)",
+        thumbnail: "/images/thumbnail/trot_2.jpg",
+        src: "https://youtube.com/shorts/KfuvKH-aDok?si=hTB7OAe7X9nkicxQ",
+        date: "2026-02-12"
       }
     ]
   },
   {
     slug: "neoguri",
     title: "너굴이",
-    summary: "직접적인 참여가 있었던 채널은 아닙니다. 연관 채널입니다.",
+    summary: "직접적인 참여가 있었던 채널이 아닙니다. 연관 채널입니다.",
     description: "해당 채널은 자문 역할만 수행하였습니다.",
-    role: "Producer",
-    period: "2023.09 - 2025.12",
-    kpi: ["주간 조회수 평균 22만", "뉴스레터 전환 11%", "평균 완주율 43%"],
+    role: "Creative Director",
+    period: "2025.04 - 2025.11",
+    kpi: ["구독자 10만, 총 조회수 3700만"],
     tags: ["Documentary", "Tutorial", "Podcast"],
     updatedAt: "2025-12-05",
     recommendedRank: 7,
@@ -230,17 +247,17 @@ export const channels: Channel[] = [
     videos: [
       {
         type: "youtube",
-        title: "2025 콘텐츠 트렌드 TOP10",
-        thumbnail: "/images/thumbnail/ysz5S6PUM-U.svg",
-        src: "ysz5S6PUM-U",
-        date: "2025-12-05"
+        title: "게임 브랜디드 콘텐츠",
+        thumbnail: "/images/thumbnail/neoguri_1.jpg",
+        src: "https://youtu.be/mCUtGaQ2SYE?si=KzQDQIMVpX_Fn6Lh",
+        date: "2025-10-19"
       },
       {
         type: "youtube",
-        title: "포맷 전환 사례 분석",
-        thumbnail: "/images/thumbnail/tgbNymZ7vqY.svg",
-        src: "tgbNymZ7vqY",
-        date: "2025-10-29"
+        title: "스토리텔링 콘텐츠",
+        thumbnail: "/images/thumbnail/neoguri_2.jpg",
+        src: "https://youtube.com/shorts/1wXniXFzlPI?si=6bPzeIZh_GdeSNv6",
+        date: "2025-06-04"
       }
     ]
   },
@@ -249,7 +266,7 @@ export const channels: Channel[] = [
     title: "Noob (아티스트 눕)",
     summary: "브랜드 캠페인 과정을 기록한 비하인드 아카이브",
     description: "캠페인 전개 과정과 성과 데이터를 다큐 시리즈로 재구성했습니다.",
-    role: "Creative Director",
+    role: "Producer",
     period: "2026.02 - ing",
     kpi: ["캠페인 총 도달 3,400만", "브랜드 검색량 +54%", "재의뢰 9건"],
     tags: ["Campaign", "Documentary", "Brand"],

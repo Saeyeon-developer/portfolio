@@ -14,7 +14,7 @@ export const careerTimeline = [
     description: "브랜디드 콘텐츠 기획 및 촬영, 편집 총괄. 협업 프로젝트 운영 및 채널 성장 전략 실행."
   },
   {
-    period: "2012 - 2020",
+    period: "2012 - 2022",
     title: "네이버 블로거 (닉네임: 윈도)",
     description: "게임 주제 네이버 블로거 활동, 2017년 네이버 이달의블로그(파워블로거) 선정"
   },

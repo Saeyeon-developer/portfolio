@@ -13,6 +13,7 @@ export type YouTubeItem = BaseMediaItem & {
 
 export type FileItem = BaseMediaItem & {
   type: "file";
+  // Supports: absolute URL, /public/videos/... path, or blob:videos/file.mp4 shorthand.
   src: string;
 };
 
@@ -34,7 +35,9 @@ export type ChannelTag =
   | "Tutorial"
   | "Podcast"
   | "Campaign"
-  | "Livestream";
+  | "Livestream"
+  | "AI"
+  | "Game";
 
 export type ChannelRole =
   | "Producer"
@@ -43,7 +46,7 @@ export type ChannelRole =
   | "Creative Director"
   | "Developer";
 
-export type SkillCategory = "Editing" | "Motion" | "Design" | "Dev" | "Content";
+export type SkillCategory = "Editing" | "Motion" | "Design" | "AI" | "Content";
 
 export type SkillGroup = {
   category: SkillCategory;
@@ -69,7 +72,10 @@ export type ExtraItem = {
   id: string;
   title: string;
   description: string;
+  // Backward-compatible single source. Used when images is omitted.
   image: string;
+  // Multi-image source list for lightbox carousel.
+  images?: string[];
   date: string;
   note: string;
 };

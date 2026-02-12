@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useRef } from "react";
 import Image from "next/image";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 import { ExtraItem } from "@/types/content";
 
@@ -13,6 +13,30 @@ type LightboxProps = {
 
 export function Lightbox({ item, isOpen, onClose }: LightboxProps) {
   const panelRef = useRef<HTMLDivElement>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const images = useMemo(() => {
+    if (!item) {
+      return [] as string[];
+    }
+
+    if (item.images && item.images.length > 0) {
+      return item.images;
+    }
+
+    return item.image ? [item.image] : [];
+  }, [item]);
+
+  const imageCount = images.length;
+  const currentImage = imageCount > 0 ? images[currentIndex] : null;
+
+  useEffect(() => {
+    if (!isOpen) {
+      return;
+    }
+
+    setCurrentIndex(0);
+  }, [isOpen, item]);
 
   useEffect(() => {
     if (!isOpen) {
@@ -38,6 +62,16 @@ export function Lightbox({ item, isOpen, onClose }: LightboxProps) {
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         onClose();
+        return;
+      }
+
+      if (imageCount > 1 && (event.key === "ArrowLeft" || event.key === "ArrowRight")) {
+        event.preventDefault();
+        if (event.key === "ArrowLeft") {
+          setCurrentIndex((prev) => (prev - 1 + imageCount) % imageCount);
+        } else {
+          setCurrentIndex((prev) => (prev + 1) % imageCount);
+        }
         return;
       }
 
@@ -71,7 +105,7 @@ export function Lightbox({ item, isOpen, onClose }: LightboxProps) {
       document.body.style.overflow = previousOverflow;
       previous?.focus();
     };
-  }, [isOpen, onClose]);
+  }, [imageCount, isOpen, onClose]);
 
   if (!isOpen || !item) {
     return null;
@@ -102,9 +136,45 @@ export function Lightbox({ item, isOpen, onClose }: LightboxProps) {
           </button>
         </div>
 
-        <div className="relative h-[75vh] overflow-hidden rounded-xl">
-          <Image src={item.image} alt={item.title} fill sizes="100vw" className="object-contain" />
-        </div>
+        {currentImage ? (
+          <div className="relative h-[75vh] overflow-hidden rounded-xl">
+            <Image
+              src={currentImage}
+              alt={`${item.title} (${currentIndex + 1}/${imageCount})`}
+              fill
+              sizes="100vw"
+              className="object-contain"
+            />
+
+            {imageCount > 1 ? (
+              <>
+                <button
+                  type="button"
+                  onClick={() => setCurrentIndex((prev) => (prev - 1 + imageCount) % imageCount)}
+                  aria-label="이전 이미지"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-black/65 px-3 py-2 text-xs font-semibold text-white"
+                >
+                  이전
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setCurrentIndex((prev) => (prev + 1) % imageCount)}
+                  aria-label="다음 이미지"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-black/65 px-3 py-2 text-xs font-semibold text-white"
+                >
+                  다음
+                </button>
+                <p className="absolute bottom-3 right-3 rounded-full bg-black/65 px-2.5 py-1 text-xs text-white">
+                  {currentIndex + 1} / {imageCount}
+                </p>
+              </>
+            ) : null}
+          </div>
+        ) : (
+          <div className="flex h-[75vh] items-center justify-center rounded-xl bg-black/40 px-6 text-center text-sm text-mist/80">
+            표시할 이미지가 없습니다. `image` 또는 `images`를 확인해주세요.
+          </div>
+        )}
       </div>
     </div>
   );

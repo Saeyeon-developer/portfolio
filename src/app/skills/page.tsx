@@ -14,8 +14,7 @@ export default function SkillsPage() {
       <section className="panel p-8 sm:p-10">
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Skills</h1>
         <p className="mt-3 max-w-2xl text-sm text-ink/70 dark:text-mist/70">
-          Editing, Motion, Design, Dev, Content 카테고리로 역량을 분류했습니다. 각 항목은 실제 프로젝트에서
-          반복적으로 사용한 기술과 워크플로우를 기준으로 구성했습니다.
+          실제 업무를 진행하면서 반복적으로 사용하였던 기술 스택입니다. 특히 현재도 사용하고 있는 것들만 기재하였습니다.
         </p>
       </section>
 

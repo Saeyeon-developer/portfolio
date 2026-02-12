@@ -10,6 +10,8 @@ type ExtrasCardProps = {
 };
 
 export function ExtrasCard({ item, onImageClick }: ExtrasCardProps) {
+  const previewImage = item.images?.[0] ?? item.image;
+
   return (
     <article className="panel flex flex-col overflow-hidden p-3 sm:flex-row sm:items-stretch sm:gap-4">
       <button
@@ -20,7 +22,7 @@ export function ExtrasCard({ item, onImageClick }: ExtrasCardProps) {
       >
         <div className="relative h-44 w-full">
           <Image
-            src={item.image}
+            src={previewImage}
             alt={item.title}
             fill
             sizes="(max-width: 640px) 100vw, 256px"

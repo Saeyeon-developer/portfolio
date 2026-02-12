@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import { extractYouTubeVideoId } from "@/lib/youtube";
+import { resolveMediaSrc } from "@/lib/media";
 import { VideoItem } from "@/types/content";
 
 type VideoModalProps = {
@@ -116,6 +117,7 @@ export function VideoModal({ isOpen, video, onClose }: VideoModalProps) {
   }
 
   const youtubeId = isYouTube ? extractYouTubeVideoId(video.src) : null;
+  const resolvedMediaSrc = !isYouTube && !isPicture ? resolveMediaSrc(video.src) : "";
 
   return (
     <div
@@ -207,7 +209,7 @@ export function VideoModal({ isOpen, video, onClose }: VideoModalProps) {
               표시할 이미지가 없습니다. `src` 또는 `images`를 확인해주세요.
             </div>
           ) : (
-            <video src={video.src} controls autoPlay playsInline className="h-full w-full" />
+            <video src={resolvedMediaSrc} controls autoPlay playsInline className="h-full w-full" />
           )}
         </div>
       </div>
