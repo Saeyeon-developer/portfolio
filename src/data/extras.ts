@@ -2,27 +2,27 @@ import { ExtraItem } from "@/types/content";
 
 export const extras: ExtraItem[] = [
   {
-    id: "studio-notes",
-    title: "Studio Notes",
-    description: "작업 전/후 레퍼런스를 정리한 제작 노트 아카이브입니다.",
-    image: "/images/extra-1.svg",
-    images: ["/images/extra-1.svg", "/images/extra-2.svg", "/images/extra-3.svg"],
+    id: "homepage",
+    title: "지금 보시는 홈페이지 역시",
+    description: "플랫폼이나 템플릿이 아니라 코딩으로 만들어진 개인 홈페이지 입니다.",
+    image: "/images/extras/extras_1.png",
+    images: ["/images/extras/extras_1.png"],
     date: "2025-09-01",
-    note: "체크리스트, 프레임 설계, 사운드 큐"
+    note: ""
   },
   {
-    id: "template-kit",
-    title: "Template Kit",
-    description: "반복 업무를 줄이기 위한 AE/PR 템플릿 세트입니다.",
-    image: "/images/extra-2.svg",
-    images: ["/images/extra-2.svg", "/images/extra-4.svg", "/images/extra-5.svg"],
-    date: "2025-07-12",
-    note: "인트로/아웃트로, 자막, lower-third"
+    id: "blog",
+    title: "네이버 블로그",
+    description: "중학교 시절부터 운영하였던 곳이자, 제 인생 첫 번째 크리에이터 생활",
+    image: "/images/extras/extras_2.png",
+    images: ["/images/extras/extras_2.png"],
+    date: "2012-07-12",
+    note: ""
   },
   {
-    id: "thumbnail-lab",
-    title: "Thumbnail Lab",
-    description: "썸네일 A/B 실험 기록과 CTR 개선 결과를 모았습니다.",
+    id: "legal-action",
+    title: "채널 법적 대응",
+    description: "2026년 초 유튜브 업계 전반적으로 발생한 채널 정지 사태에서 대응한 기록",
     image: "/images/extra-3.svg",
     images: ["/images/extra-3.svg", "/images/extra-1.svg", "/images/extra-5.svg"],
     date: "2025-05-20",
