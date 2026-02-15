@@ -5,6 +5,8 @@ import Link from "next/link";
 import { featuredChannels } from "@/data/channels";
 import { extras } from "@/data/extras";
 import { skills } from "@/data/skills";
+import { workPhotos } from "@/data/workPhotos";
+import { WorkPhotoMarquee } from "@/components/home/WorkPhotoMarquee";
 import { SkillTabs } from "@/components/skills/SkillTabs";
 
 export const metadata: Metadata = {
@@ -37,6 +39,10 @@ export default function HomePage() {
             Contact
           </Link>
         </div>
+      </section>
+
+      <section>
+        <WorkPhotoMarquee photos={workPhotos} />
       </section>
 
       <section>

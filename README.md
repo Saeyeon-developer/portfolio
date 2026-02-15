@@ -75,6 +75,10 @@ npm run start
 - 파일: `src/data/skills.ts`
 - 타입: `SkillGroup`, `SkillCategory`
 
+### 4) Work Photos (Home Marquee)
+- 파일: `src/data/workPhotos.ts`
+- Home의 Featured Channels 상단 무한 스크롤 사진 스트립 데이터
+
 ## 데이터 추가 방법
 1. `src/data/channels.ts`에 채널 객체를 추가하고 `slug`를 고유하게 설정합니다.
 2. 각 채널의 `videos[0]`이 카드 대표작으로 사용됩니다.
@@ -87,6 +91,7 @@ npm run start
 6. picture 타입 항목은 `images` 배열로 여러 이미지 경로를 입력할 수 있습니다. (`src`는 폴백 1장)
 7. `src/data/extras.ts`의 `images` 배열에 여러 이미지를 넣으면 라이트박스에서 좌우 넘김이 가능합니다. (`image`는 폴백)
 8. `src/data/skills.ts`에서 카테고리별 기술 목록을 수정합니다.
+9. Home 상단 작업 사진은 `src/data/workPhotos.ts`의 `src`/`alt`를 수정합니다.
 
 ## Environment Variables
 - `NEXT_PUBLIC_BLOB_BASE_URL`
