@@ -33,7 +33,7 @@ export default function HomePage() {
             Channels
           </Link>
           <Link
-            href="/#contact"
+            href="/about"
             className="rounded-full border border-black/15 px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] dark:border-white/20"
           >
             Contact

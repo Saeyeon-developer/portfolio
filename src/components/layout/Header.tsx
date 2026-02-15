@@ -45,7 +45,7 @@ export function Header() {
         <div className="ml-auto flex items-center gap-2 md:ml-3">
           <ThemeToggle />
           <a
-            href="mailto:contact@example.com"
+            href="mailto:yui050505@gmail.com"
             className="rounded-full bg-sunset px-3 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-white transition hover:brightness-95"
             aria-label="Contact by email"
           >

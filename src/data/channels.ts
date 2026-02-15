@@ -1,22 +1,11 @@
-import { Channel, ChannelRole, ChannelTag } from "@/types/content";
-
-export const channelTags: ChannelTag[] = [
-  "Brand",
-  "Documentary",
-  "Interview",
-  "Shorts",
-  "Tutorial",
-  "Podcast",
-  "Campaign",
-  "Livestream"
-];
+import { Channel, ChannelRole } from "@/types/content";
 
 export const channelRoles: ChannelRole[] = [
   "Producer",
   "Editor",
   "Motion Designer",
   "Creative Director",
-  "Developer"
+  "Developer",
 ];
 
 export const channels: Channel[] = [
@@ -29,7 +18,6 @@ export const channels: Channel[] = [
     role: "Producer",
     period: "2020.01 - ing",
     kpi: ["총 조회수 3억 7천만", "구독자 40만", "영상 5500개 이상"],
-    tags: ["Documentary", "Interview", "Brand"],
     updatedAt: "2025-12-14",
     recommendedRank: 1,
     performanceScore: 97,
@@ -41,26 +29,37 @@ export const channels: Channel[] = [
         src: "https://youtu.be/xuNrxcT1mgY?si=kCJ8N_v6_WlRZYBG",
         date: "2026-02-07",
         note: "기부를 동반한 공동구매 프로젝트",
-        contribution: "기여도: 촬영 100%, 편집 100%, 기획 50%"
+        contribution: "기여도: 촬영 100%, 편집 100%, 기획 50%",
       },
       {
-        type: "file",
-        title: "브랜드 협업 티저 컷",
-        thumbnail: "/images/thumbnail/file-placeholder.svg",
-        src: "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-        date: "2025-10-01"
-      }
-    ]
+        type: "youtube",
+        title: "게임 플레이 콘텐츠",
+        thumbnail: "/images/thumbnail/nugulmon_2.jpg",
+        src: "https://www.youtube.com/watch?v=0YN_nCC43t8",
+        date: "2022-03-22",
+        note: "로블록스",
+        contribution: "기여도: 편집 100%",
+      },
+      {
+        type: "youtube",
+        title: "게임 플레이 콘텐츠 쇼츠",
+        thumbnail: "/images/thumbnail/nugulmon_3.jpg",
+        src: "https://youtube.com/shorts/Q9Ru9TJ-4hg?si=9Mr3gqIadZHHDCJt",
+        date: "2024-10-17",
+        note: "브롤스타즈 개발사 슈퍼셀의 공식 크리에이터이기도 합니다.",
+        contribution: "기여도: 편집 100%",
+      },
+    ],
   },
   {
     slug: "seoulsungyu",
     title: "술성규",
     summary: "PD로 참여하고 있는 채널",
-    description: "PD로서 영상 제작부터 콜라보 진행까지 모든 걸 직접 담당합니다.",
+    description:
+      "PD로서 영상 제작부터 콜라보 진행까지 모든 걸 직접 담당합니다.",
     role: "Producer",
     period: "2023.02 - ing",
     kpi: ["VLOG", "PD로 참여", "인플루언서"],
-    tags: ["Campaign", "Shorts", "Brand"],
     updatedAt: "2025-11-30",
     recommendedRank: 2,
     performanceScore: 95,
@@ -72,7 +71,7 @@ export const channels: Channel[] = [
         src: "https://youtu.be/u9UzK3JzN4w?si=XOYrZHxuA1NT-i76",
         date: "2024-03-02",
         contribution: "기여도: 촬영 100%, 편집 100%, 썸네일 100% 기획 50%",
-        note: "다른 채널보다 훨씬 자유롭고 원하는대로 영상을 제작하는 채널입니다."
+        note: "다른 채널보다 훨씬 자유롭고 원하는대로 영상을 제작하는 채널입니다.",
       },
       {
         type: "youtube",
@@ -81,26 +80,26 @@ export const channels: Channel[] = [
         src: "https://www.youtube.com/watch?v=apf474bQozE",
         date: "2025-09-05",
         contribution: "기여도: 촬영 100%, 편집 100%, 썸네일 100% 기획 50%",
-        note: "주류 상품이므로 유튜브 연령 제한이 있습니다."
+        note: "주류 상품이므로 유튜브 연령 제한이 있습니다.",
       },
       {
         type: "picture",
         title: "채널 핸들링 인증 메일함",
         thumbnail: "/images/thumbnail/seoulsungyu_3.png",
         src: "/images/thumbnail/seoulsungyu_3.png",
-        note: "실제로 여러 대기업들과 콜라보 콘텐츠를 진행하였습니다."
-      }
-    ]
+        note: "실제로 여러 대기업들과 콜라보 콘텐츠를 진행하였습니다.",
+      },
+    ],
   },
   {
     slug: "nagne",
     title: "Nagne (나그네)",
     summary: "밈 채널의 퍼포먼스 실험 채널",
-    description: "해외 시청자를 대상으로 얼마나 먹힐 수 있는지를 자체 시험하는 프로젝트 채널",
+    description:
+      "해외 시청자를 대상으로 얼마나 먹힐 수 있는지를 자체 시험하는 프로젝트 채널",
     role: "Editor",
     period: "2021.12 - 2025.12",
     kpi: ["구독자 200만", "총 조회수: 7억"],
-    tags: ["Podcast", "Interview", "Shorts"],
     updatedAt: "2021-10-22",
     recommendedRank: 4,
     performanceScore: 94,
@@ -120,8 +119,8 @@ export const channels: Channel[] = [
         src: "https://youtu.be/7uxq5dy1e3s?si=TCshUIOd0d0699vP",
         date: "2021-12-14",
         contribution: "기여도: 편집 100%",
-      }
-    ]
+      },
+    ],
   },
   {
     slug: "loony-bloxy",
@@ -131,7 +130,6 @@ export const channels: Channel[] = [
     role: "Producer",
     period: "2025.12 - 진행중",
     kpi: ["개설 20일 유효 조회수 1000만 돌파", "수익 창출 1개월만에 성공"],
-    tags: ["Tutorial", "Livestream", "Documentary"],
     updatedAt: "2025-12-01",
     recommendedRank: 3,
     performanceScore: 93,
@@ -141,44 +139,48 @@ export const channels: Channel[] = [
         title: "수익 창출 인증",
         thumbnail: "/images/thumbnail/loony_1.png",
         src: "/images/thumbnail/loony_1.png",
-        date: "2026-01-30"
+        date: "2026-01-30",
       },
       {
         type: "picture",
         title: "중간 성과 지표들",
         thumbnail: "/images/thumbnail/loony_2.png",
         src: "/images/thumbnail/loony_2.png",
-        images: ["/images/thumbnail/loony_2.png", "/images/thumbnail/loony_3.png", "/images/thumbnail/loony_4.png"],
-        date: "2026-02-02"
+        images: [
+          "/images/thumbnail/loony_2.png",
+          "/images/thumbnail/loony_3.png",
+          "/images/thumbnail/loony_4.png",
+        ],
+        date: "2026-02-02",
       },
       {
         type: "file",
         title: "Game vs Real",
         thumbnail: "",
-        src:"https://rthww4xn4lzutlkr.public.blob.vercel-storage.com/Loonybloxy_1.mp4",
+        src: "https://rthww4xn4lzutlkr.public.blob.vercel-storage.com/Loonybloxy_1.mp4",
         date: "2026-01-21",
-        contribution: "편집 100%, AI 100%"
+        contribution: "편집 100%, AI 100%",
       },
       {
         type: "file",
         title: "순수 창작 애니메이션",
         thumbnail: "",
-        src:"https://rthww4xn4lzutlkr.public.blob.vercel-storage.com/Loonybloxy_2.mp4",
+        src: "https://rthww4xn4lzutlkr.public.blob.vercel-storage.com/Loonybloxy_2.mp4",
         date: "2026-01-21",
         note: "상용화 되어 있는 거의 모든 AI가 활용되었습니다.",
-        contribution: "편집 100%, AI 100%"
-      }
-    ]
+        contribution: "편집 100%, AI 100%",
+      },
+    ],
   },
   {
     slug: "parkholmes",
     title: "박홈즈",
     summary: "AI를 활용한 상황극 콘텐츠",
-    description: "2025년 세계적으로 브레인롯 붐이 일어났을 때, AI로 시도해본 채널입니다.",
+    description:
+      "2025년 세계적으로 브레인롯 붐이 일어났을 때, AI로 시도해본 채널입니다.",
     role: "Editor",
     period: "2025.09 - 2026.01",
     kpi: ["수익 창출 90일만에 성공, 구독자 6.5만, 총 조회수 2500만"],
-    tags: ["Livestream", "Brand", "Campaign"],
     updatedAt: "2025-09-19",
     recommendedRank: 5,
     performanceScore: 90,
@@ -190,7 +192,7 @@ export const channels: Channel[] = [
         src: "https://youtube.com/shorts/5Cm-A5mAMxs?si=Sm9zDFjfcXWIjneF",
         date: "2025-11-28",
         contribution: "기여도: 편집 100%, AI: 100%",
-        note: "광고 영상임에도 590만 조회수"
+        note: "광고 영상임에도 590만 조회수",
       },
       {
         type: "youtube",
@@ -199,9 +201,9 @@ export const channels: Channel[] = [
         src: "https://youtube.com/shorts/oRERVm9naOI?si=-cLTXXRTltRH7SQo",
         date: "2025-10-17",
         contribution: "기여도: 편집 100%, AI: 100%",
-        note: "AI의 기본 Veo, Nanobanana 활용"
-      }
-    ]
+        note: "AI의 기본 Veo, Nanobanana 활용",
+      },
+    ],
   },
   {
     slug: "trot",
@@ -211,7 +213,6 @@ export const channels: Channel[] = [
     role: "Editor",
     period: "2025.11 - 진행중",
     kpi: ["총 조회수: 2000만, 자체 음원 저작권 보유"],
-    tags: ["Shorts", "Tutorial", "Campaign"],
     updatedAt: "2025-12-10",
     recommendedRank: 6,
     performanceScore: 87,
@@ -221,16 +222,16 @@ export const channels: Channel[] = [
         title: "순수 음원 콘텐츠",
         thumbnail: "/images/thumbnail/trot_1.jpg",
         src: "https://youtu.be/r8xKwMRdTF4?si=_ZwMFBS4Oa5blynR",
-        date: "2026-02-01"
+        date: "2026-02-01",
       },
       {
         type: "youtube",
         title: "숏폼으로 캐릭터 AI(립싱크)",
         thumbnail: "/images/thumbnail/trot_2.jpg",
         src: "https://youtube.com/shorts/KfuvKH-aDok?si=hTB7OAe7X9nkicxQ",
-        date: "2026-02-12"
-      }
-    ]
+        date: "2026-02-12",
+      },
+    ],
   },
   {
     slug: "neoguri",
@@ -240,7 +241,6 @@ export const channels: Channel[] = [
     role: "Creative Director",
     period: "2025.04 - 2025.11",
     kpi: ["구독자 10만, 총 조회수 3700만"],
-    tags: ["Documentary", "Tutorial", "Podcast"],
     updatedAt: "2025-12-05",
     recommendedRank: 7,
     performanceScore: 89,
@@ -250,26 +250,26 @@ export const channels: Channel[] = [
         title: "게임 브랜디드 콘텐츠",
         thumbnail: "/images/thumbnail/neoguri_1.jpg",
         src: "https://youtu.be/mCUtGaQ2SYE?si=KzQDQIMVpX_Fn6Lh",
-        date: "2025-10-19"
+        date: "2025-10-19",
       },
       {
         type: "youtube",
         title: "스토리텔링 콘텐츠",
         thumbnail: "/images/thumbnail/neoguri_2.jpg",
         src: "https://youtube.com/shorts/1wXniXFzlPI?si=6bPzeIZh_GdeSNv6",
-        date: "2025-06-04"
-      }
-    ]
+        date: "2025-06-04",
+      },
+    ],
   },
   {
     slug: "artist-noob",
     title: "Noob (아티스트 눕)",
     summary: "브랜드 캠페인 과정을 기록한 비하인드 아카이브",
-    description: "캠페인 전개 과정과 성과 데이터를 다큐 시리즈로 재구성했습니다.",
+    description:
+      "캠페인 전개 과정과 성과 데이터를 다큐 시리즈로 재구성했습니다.",
     role: "Producer",
     period: "2026.02 - ing",
     kpi: ["캠페인 총 도달 3,400만", "브랜드 검색량 +54%", "재의뢰 9건"],
-    tags: ["Campaign", "Documentary", "Brand"],
     updatedAt: "2025-08-22",
     recommendedRank: 8,
     performanceScore: 92,
@@ -279,17 +279,47 @@ export const channels: Channel[] = [
         title: "런칭 캠페인 메이킹 필름",
         thumbnail: "/images/thumbnail/mRf3-JkwqfU.svg",
         src: "mRf3-JkwqfU",
-        date: "2025-08-22"
+        date: "2025-08-22",
       },
       {
         type: "file",
         title: "캠페인 버티컬 컷",
         thumbnail: "/images/thumbnail/file-placeholder.svg",
         src: "https://storage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4",
-        date: "2025-07-11"
-      }
-    ]
-  }
+        date: "2025-07-11",
+      },
+    ],
+  },
+  {
+    slug: "personal-work",
+    title: "개인 작업물",
+    summary: "공부 혹은 스킬 테스트를 위한 작업입니다.",
+    description: "오랫동안 쓰지 않았거나, 새로운 기술들을 가끔 꺼내 씁니다.",
+    role: "Producer",
+    period: "2026.02 - ing",
+    kpi: ["개인 작업물"],
+    updatedAt: "2025-08-22",
+    recommendedRank: 9,
+    performanceScore: 91,
+    videos: [
+      {
+        type: "file",
+        title: "애프터이펙트 모션그래픽",
+        thumbnail: "/images/thumbnail/mRf3-JkwqfU.svg",
+        src: "mRf3-JkwqfU",
+        date: "2026-02-15",
+        note: "어떠한 플러그인도 사용하지 않고 100% 애프터이펙트로만 제작",
+      },
+      {
+        type: "file",
+        title: "AI를 활용한 브랜드 광고",
+        thumbnail: "/images/thumbnail/file-placeholder.svg",
+        src: "https://storage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4",
+        date: "2025-02-26",
+        note: "Seedance를 활용한 브랜드 광고 제작",
+      },
+    ],
+  },
 ];
 
 export const featuredChannels = channels

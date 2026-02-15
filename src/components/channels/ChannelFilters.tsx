@@ -1,34 +1,28 @@
 "use client";
 
-import { ChannelRole, ChannelTag } from "@/types/content";
+import { ChannelRole } from "@/types/content";
 
 type ChannelFiltersProps = {
   search: string;
   onSearchChange: (value: string) => void;
-  selectedTags: ChannelTag[];
-  onToggleTag: (tag: ChannelTag) => void;
   selectedRole: ChannelRole | "all";
   onRoleChange: (role: ChannelRole | "all") => void;
   sort: "recommended" | "latest" | "performance";
   onSortChange: (sort: "recommended" | "latest" | "performance") => void;
   viewMode: "grid" | "list";
   onViewModeChange: (mode: "grid" | "list") => void;
-  tags: ChannelTag[];
   roles: ChannelRole[];
 };
 
 export function ChannelFilters({
   search,
   onSearchChange,
-  selectedTags,
-  onToggleTag,
   selectedRole,
   onRoleChange,
   sort,
   onSortChange,
   viewMode,
   onViewModeChange,
-  tags,
   roles
 }: ChannelFiltersProps) {
   return (
@@ -38,35 +32,11 @@ export function ChannelFilters({
         <input
           value={search}
           onChange={(event) => onSearchChange(event.target.value)}
-          placeholder="채널명, 설명, 태그 검색"
+          placeholder="채널명, 설명 검색"
           aria-label="채널 검색"
           className="w-full rounded-xl border border-black/10 bg-white/90 px-3 py-2 text-sm outline-none ring-sunset/40 transition focus:ring-2 dark:border-white/20 dark:bg-white/5"
         />
       </label>
-
-      <div>
-        <p className="mb-2 text-sm font-semibold">태그 필터(다중 선택)</p>
-        <div className="flex flex-wrap gap-2">
-          {tags.map((tag) => {
-            const active = selectedTags.includes(tag);
-            return (
-              <button
-                key={tag}
-                type="button"
-                onClick={() => onToggleTag(tag)}
-                aria-label={`${tag} 태그 필터 토글`}
-                className={`rounded-full border px-3 py-1 text-xs font-medium transition ${
-                  active
-                    ? "border-pine bg-pine text-white"
-                    : "border-black/15 bg-white/70 hover:bg-black/5 dark:border-white/20 dark:bg-white/5 dark:hover:bg-white/10"
-                }`}
-              >
-                #{tag}
-              </button>
-            );
-          })}
-        </div>
-      </div>
 
       <div>
         <p className="mb-2 text-sm font-semibold">역할 필터(단일 선택)</p>

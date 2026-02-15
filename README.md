@@ -41,7 +41,7 @@ npm run start
 ## Data Structure
 ### 1) Channels
 - 파일: `src/data/channels.ts`
-- 타입: `src/types/content.ts`의 `Channel`, `VideoItem`, `ChannelTag`, `ChannelRole`
+- 타입: `src/types/content.ts`의 `Channel`, `VideoItem`, `ChannelRole`
 - 비디오 타입:
 ```ts
 {

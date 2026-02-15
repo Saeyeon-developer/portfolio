@@ -39,14 +39,7 @@ export default function ChannelDetailPage({ params }: ChannelDetailPageProps) {
 
   return (
     <div className="space-y-8 pb-3">
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <ul className="flex flex-wrap gap-2">
-          {channel.tags.map((tag) => (
-            <li key={tag} className="rounded-full bg-pine/10 px-3 py-1 text-xs font-medium text-pine dark:bg-pine/30 dark:text-mist">
-              #{tag}
-            </li>
-          ))}
-        </ul>
+      <div className="flex justify-end">
         <Link
           href="/channels"
           className="rounded-full border border-black/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] dark:border-white/20"

@@ -5,17 +5,15 @@ import { useMemo, useState } from "react";
 import { ChannelCard } from "@/components/channels/ChannelCard";
 import { ChannelFilters } from "@/components/channels/ChannelFilters";
 import { VideoModal } from "@/components/channels/VideoModal";
-import { Channel, ChannelRole, ChannelTag, VideoItem } from "@/types/content";
+import { Channel, ChannelRole, VideoItem } from "@/types/content";
 
 type ChannelsArchiveClientProps = {
   channels: Channel[];
-  tags: ChannelTag[];
   roles: ChannelRole[];
 };
 
-export function ChannelsArchiveClient({ channels, tags, roles }: ChannelsArchiveClientProps) {
+export function ChannelsArchiveClient({ channels, roles }: ChannelsArchiveClientProps) {
   const [search, setSearch] = useState("");
-  const [selectedTags, setSelectedTags] = useState<ChannelTag[]>([]);
   const [selectedRole, setSelectedRole] = useState<ChannelRole | "all">("all");
   const [sort, setSort] = useState<"recommended" | "latest" | "performance">("recommended");
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
@@ -28,15 +26,11 @@ export function ChannelsArchiveClient({ channels, tags, roles }: ChannelsArchive
       const bySearch =
         keyword.length === 0 ||
         channel.title.toLowerCase().includes(keyword) ||
-        channel.summary.toLowerCase().includes(keyword) ||
-        channel.tags.some((tag) => tag.toLowerCase().includes(keyword));
-
-      const byTags =
-        selectedTags.length === 0 || selectedTags.some((tag) => channel.tags.includes(tag));
+        channel.summary.toLowerCase().includes(keyword);
 
       const byRole = selectedRole === "all" || channel.role === selectedRole;
 
-      return bySearch && byTags && byRole;
+      return bySearch && byRole;
     });
 
     return filteredChannels.sort((a, b) => {
@@ -48,26 +42,19 @@ export function ChannelsArchiveClient({ channels, tags, roles }: ChannelsArchive
       }
       return a.recommendedRank - b.recommendedRank;
     });
-  }, [channels, search, selectedTags, selectedRole, sort]);
-
-  const toggleTag = (tag: ChannelTag) => {
-    setSelectedTags((prev) => (prev.includes(tag) ? prev.filter((item) => item !== tag) : [...prev, tag]));
-  };
+  }, [channels, search, selectedRole, sort]);
 
   return (
     <>
       <ChannelFilters
         search={search}
         onSearchChange={setSearch}
-        selectedTags={selectedTags}
-        onToggleTag={toggleTag}
         selectedRole={selectedRole}
         onRoleChange={setSelectedRole}
         sort={sort}
         onSortChange={setSort}
         viewMode={viewMode}
         onViewModeChange={setViewMode}
-        tags={tags}
         roles={roles}
       />
 

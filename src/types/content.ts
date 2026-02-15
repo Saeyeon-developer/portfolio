@@ -27,18 +27,6 @@ export type PictureItem = BaseMediaItem & {
 
 export type VideoItem = YouTubeItem | FileItem | PictureItem;
 
-export type ChannelTag =
-  | "Brand"
-  | "Documentary"
-  | "Interview"
-  | "Shorts"
-  | "Tutorial"
-  | "Podcast"
-  | "Campaign"
-  | "Livestream"
-  | "AI"
-  | "Game";
-
 export type ChannelRole =
   | "Producer"
   | "Editor"
@@ -61,7 +49,6 @@ export type Channel = {
   role: ChannelRole;
   period: string;
   kpi: string[];
-  tags: ChannelTag[];
   updatedAt: string;
   recommendedRank: number;
   performanceScore: number;

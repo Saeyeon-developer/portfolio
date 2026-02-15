@@ -56,14 +56,6 @@ export function ChannelCard({ channel, viewMode, onPlay }: ChannelCardProps) {
           </span>
         </div>
 
-        <ul className="flex flex-wrap gap-2">
-          {channel.tags.map((tag) => (
-            <li key={tag} className="rounded-full bg-pine/10 px-2.5 py-1 text-xs text-pine dark:bg-pine/30 dark:text-mist">
-              #{tag}
-            </li>
-          ))}
-        </ul>
-
         <div className="mt-auto flex items-center justify-between">
           <p className="text-xs uppercase tracking-[0.08em] text-ink/60 dark:text-mist/60">Updated {channel.updatedAt}</p>
           <span className="rounded-full border border-black/15 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] transition group-hover:-translate-y-0.5 dark:border-white/20">

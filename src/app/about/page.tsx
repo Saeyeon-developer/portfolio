@@ -34,7 +34,7 @@ export default function AboutPage() {
           <div>
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">변화하는 시장에 맞춰 끊임없이 공부하는 사람</h1>
             <p className="mt-4 max-w-3xl leading-7 text-ink/80 dark:text-mist/80">
-              작성 중.
+              {/* 작성 중. */}
             </p>
 
             <dl className="mt-5 grid gap-3 sm:grid-cols-2">
