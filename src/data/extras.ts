@@ -19,7 +19,7 @@ export const extras: ExtraItem[] = [
     image: "/images/extras/extras_2.png",
     images: ["/images/extras/extras_2.png"],
     date: "2012-07-12",
-    note: "",
+    note: "현재는 운영 중단 상태입니다.",
   },
   {
     id: "legal-action",

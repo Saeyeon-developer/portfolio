@@ -30,4 +30,9 @@ export const workPhotos: WorkPhoto[] = [
     src: "/images/workphotos/works_5.png",
     alt: "프로젝트 결과물을 리뷰하는 화면",
   },
+  {
+    id: "work-6",
+    src: "/images/workphotos/works_6.png",
+    alt: "프로젝트 결과물을 리뷰하는 화면",
+  },
 ];

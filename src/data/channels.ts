@@ -156,7 +156,7 @@ export const channels: Channel[] = [
       {
         type: "file",
         title: "Game vs Real",
-        thumbnail: "",
+        thumbnail: "/images/thumbnail/loony_5.png",
         src: "https://rthww4xn4lzutlkr.public.blob.vercel-storage.com/Loonybloxy_1.mp4",
         date: "2026-01-21",
         contribution: "편집 100%, AI 100%",
@@ -164,7 +164,7 @@ export const channels: Channel[] = [
       {
         type: "file",
         title: "순수 창작 애니메이션",
-        thumbnail: "",
+        thumbnail: "/images/thumbnail/loony_6.png",
         src: "https://rthww4xn4lzutlkr.public.blob.vercel-storage.com/Loonybloxy_2.mp4",
         date: "2026-01-21",
         note: "상용화 되어 있는 거의 모든 AI가 활용되었습니다.",
@@ -305,8 +305,8 @@ export const channels: Channel[] = [
       {
         type: "file",
         title: "애프터이펙트 모션그래픽",
-        thumbnail: "/images/thumbnail/mRf3-JkwqfU.svg",
-        src: "mRf3-JkwqfU",
+        thumbnail: "/images/thumbnail/personal_1.jpg",
+        src: "https://rthww4xn4lzutlkr.public.blob.vercel-storage.com/motion_graphic.mp4",
         date: "2026-02-15",
         note: "어떠한 플러그인도 사용하지 않고 100% 애프터이펙트로만 제작",
       },

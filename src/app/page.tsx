@@ -6,6 +6,7 @@ import { featuredChannels } from "@/data/channels";
 import { extras } from "@/data/extras";
 import { skills } from "@/data/skills";
 import { workPhotos } from "@/data/workPhotos";
+import { ViewAllButton } from "@/components/common/ViewAllButton";
 import { WorkPhotoMarquee } from "@/components/home/WorkPhotoMarquee";
 import { SkillTabs } from "@/components/skills/SkillTabs";
 
@@ -48,9 +49,7 @@ export default function HomePage() {
       <section>
         <div className="mb-5 flex items-end justify-between gap-4">
           <h2 className="section-title">Featured Channels</h2>
-          <Link href="/channels" className="text-sm font-semibold text-pine underline-offset-4 hover:underline">
-            전체 채널 보기
-          </Link>
+          <ViewAllButton href="/channels" />
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {featuredChannels.slice(0, 12).map((channel) => (
@@ -87,9 +86,7 @@ export default function HomePage() {
       <section>
         <div className="mb-5 flex items-end justify-between gap-4">
           <h2 className="section-title">Extras Teaser</h2>
-          <Link href="/extras" className="rounded-full bg-sunset px-4 py-2 text-sm font-semibold text-white">
-            전체보기
-          </Link>
+          <ViewAllButton href="/extras" />
         </div>
         <div className="grid gap-4 md:grid-cols-3">
           {extras.slice(0, 3).map((item) => (
