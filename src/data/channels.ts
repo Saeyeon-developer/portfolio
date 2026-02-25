@@ -136,8 +136,12 @@ export const channels: Channel[] = [
     summary: "AI 영상 해외 프로젝트",
     description: "AI 기술을 활용하여 운영했던 해외 채널",
     role: "Producer",
-    period: "2025.12 - 진행중",
-    kpi: ["개설 20일 유효 조회수 1000만 돌파", "수익 창출 1개월만에 성공"],
+    period: "2025.12 - 2026.02",
+    kpi: [
+      "개설 20일 유효 조회수 1000만 돌파",
+      "수익 창출 1개월만에 성공",
+      "유튜브 자동화 검열로 정지",
+    ],
     updatedAt: "2025-12-01",
     recommendedRank: 3,
     performanceScore: 93,
@@ -304,13 +308,12 @@ export const channels: Channel[] = [
   {
     slug: "artist-noob",
     title: "Noob (아티스트 눕)",
-    summary: "브랜드 캠페인 과정을 기록한 비하인드 아카이브",
-    description:
-      "캠페인 전개 과정과 성과 데이터를 다큐 시리즈로 재구성했습니다.",
+    summary: "AI 영상 해외 프로젝트2",
+    description: "Loony Bloxy 채널의 후속 채널",
     role: "Producer",
     period: "2026.02 - ing",
-    kpi: ["캠페인 총 도달 3,400만", "브랜드 검색량 +54%", "재의뢰 9건"],
-    updatedAt: "2025-08-22",
+    kpi: [""],
+    updatedAt: "2026-02-25",
     recommendedRank: 8,
     performanceScore: 92,
     videos: [
