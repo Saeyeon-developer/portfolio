@@ -49,16 +49,12 @@ export const extras: ExtraItem[] = [
     note: "현재도 공부 진행 중입니다.",
   },
   {
-    id: "gear-log",
-    title: "Gear Log",
-    description: "촬영 장비별 세팅값과 테스트 결과를 정리했습니다.",
-    image: "/images/extra-5.svg",
-    images: [
-      "/images/extra-5.svg",
-      "/images/extra-4.svg",
-      "/images/extra-1.svg",
-    ],
-    date: "2025-02-28",
-    note: "카메라 프리셋, 오디오 게인 기록",
+    id: "patent",
+    title: "VR 특허",
+    description: "VR 코디네이터 관련 특허 보유",
+    image: "/images/extras/patent_0.png",
+    images: ["/images/extras/patent_0.png", "/images/extras/patent_1.png"],
+    date: "2017-12-12",
+    note: "특허청 정보",
   },
 ];
