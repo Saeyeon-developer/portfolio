@@ -1,8 +1,10 @@
+import { profileAssets } from "@/data/imageAssets";
+
 export const aboutProfile = {
   name: "이재원",
   role: "Creator / PD",
   tagline: "콘텐츠 기획부터 촬영, 편집, 퍼블리싱까지 직접 운영합니다.",
-  image: "/images/profile/profile.png",
+  image: profileAssets.main,
   location: "Seoul, KR",
   email: "yui050505@gmail.com"
 };

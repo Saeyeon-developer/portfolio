@@ -1,6 +1,8 @@
+export type LocalImageSrc = `/${string}`;
+
 type BaseMediaItem = {
   title: string;
-  thumbnail: string;
+  thumbnail: LocalImageSrc;
   date?: string;
   note?: string;
   contribution?: string;
@@ -20,9 +22,9 @@ export type FileItem = BaseMediaItem & {
 export type PictureItem = BaseMediaItem & {
   type: "picture";
   // Backward-compatible single source. Used when images is omitted.
-  src: string;
+  src: LocalImageSrc;
   // Multi-image source list for carousel in modal.
-  images?: string[];
+  images?: LocalImageSrc[];
 };
 
 export type VideoItem = YouTubeItem | FileItem | PictureItem;
@@ -60,9 +62,9 @@ export type ExtraItem = {
   title: string;
   description: string;
   // Backward-compatible single source. Used when images is omitted.
-  image: string;
+  image: LocalImageSrc;
   // Multi-image source list for lightbox carousel.
-  images?: string[];
+  images?: LocalImageSrc[];
   date: string;
   note: string;
 };

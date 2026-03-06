@@ -1,4 +1,6 @@
 import { Channel, ChannelRole } from "@/types/content";
+import { createPictureItem } from "@/data/contentBuilders";
+import { thumbnailAssets } from "@/data/imageAssets";
 
 export const channelRoles: ChannelRole[] = [
   "Producer",
@@ -25,7 +27,7 @@ export const channels: Channel[] = [
       {
         type: "youtube",
         title: "서울 구세군과 함께하는 브랜디드 콘텐츠",
-        thumbnail: "/images/thumbnail/nugulmon_1.jpg",
+        thumbnail: thumbnailAssets.nugulmon1,
         src: "https://youtu.be/xuNrxcT1mgY?si=kCJ8N_v6_WlRZYBG",
         date: "2026-02-07",
         note: "기부를 동반한 공동구매 프로젝트",
@@ -34,7 +36,7 @@ export const channels: Channel[] = [
       {
         type: "youtube",
         title: "게임 플레이 콘텐츠",
-        thumbnail: "/images/thumbnail/nugulmon_2.jpg",
+        thumbnail: thumbnailAssets.nugulmon2,
         src: "https://www.youtube.com/watch?v=0YN_nCC43t8",
         date: "2022-03-22",
         note: "로블록스",
@@ -43,7 +45,7 @@ export const channels: Channel[] = [
       {
         type: "youtube",
         title: "게임 플레이 콘텐츠 쇼츠",
-        thumbnail: "/images/thumbnail/nugulmon_3.jpg",
+        thumbnail: thumbnailAssets.nugulmon3,
         src: "https://youtube.com/shorts/Q9Ru9TJ-4hg?si=9Mr3gqIadZHHDCJt",
         date: "2024-10-17",
         note: "브롤스타즈 개발사 슈퍼셀의 공식 크리에이터이기도 합니다.",
@@ -67,7 +69,7 @@ export const channels: Channel[] = [
       {
         type: "youtube",
         title: "한잔줍쇼 시리즈",
-        thumbnail: "/images/thumbnail/seoulsungyu_1.jpg",
+        thumbnail: thumbnailAssets.seoulsungyu1,
         src: "https://youtu.be/u9UzK3JzN4w?si=XOYrZHxuA1NT-i76",
         date: "2024-03-02",
         contribution: "기여도: 촬영 100%, 편집 100%, 썸네일 100% 기획 50%",
@@ -76,19 +78,17 @@ export const channels: Channel[] = [
       {
         type: "youtube",
         title: "대기업 브랜디드 콘텐츠",
-        thumbnail: "/images/thumbnail/seoulsungyu_2.jpg",
+        thumbnail: thumbnailAssets.seoulsungyu2,
         src: "https://www.youtube.com/watch?v=apf474bQozE",
         date: "2025-09-05",
         contribution: "기여도: 촬영 100%, 편집 100%, 썸네일 100% 기획 50%",
         note: "주류 상품이므로 유튜브 연령 제한이 있습니다.",
       },
-      {
-        type: "picture",
+      createPictureItem({
         title: "채널 핸들링 인증 메일함",
-        thumbnail: "/images/thumbnail/seoulsungyu_3.png",
-        src: "/images/thumbnail/seoulsungyu_3.png",
+        image: thumbnailAssets.seoulsungyu3,
         note: "실제로 여러 대기업들과 콜라보 콘텐츠를 진행하였습니다.",
-      },
+      }),
     ],
   },
   {
@@ -107,7 +107,7 @@ export const channels: Channel[] = [
       {
         type: "youtube",
         title: "meme 시장의 이해도",
-        thumbnail: "/images/thumbnail/nagne_1.png",
+        thumbnail: thumbnailAssets.nagne1,
         src: "https://youtube.com/shorts/r1SACy3lx-E?si=kdS3DQLEIS38b02j",
         date: "2022-02-03",
         contribution: "기여도: 편집 100%",
@@ -115,19 +115,17 @@ export const channels: Channel[] = [
       {
         type: "youtube",
         title: "언리얼엔진4까지 활용했던 프로젝트",
-        thumbnail: "/images/thumbnail/nagne_2.jpg",
+        thumbnail: thumbnailAssets.nagne2,
         src: "https://youtu.be/7uxq5dy1e3s?si=TCshUIOd0d0699vP",
         date: "2021-12-14",
         contribution: "기여도: 편집 100%",
       },
-      {
-        type: "picture",
+      createPictureItem({
         title: "유튜브 채널 인증",
-        thumbnail: "/images/thumbnail/nagne_3.png",
-        src: "/images/thumbnail/nagne_3.png",
+        image: thumbnailAssets.nagne3,
         date: "2026-02-17",
         note: "혹시 모를 백업 스크린샷",
-      },
+      }),
     ],
   },
   {
@@ -146,29 +144,25 @@ export const channels: Channel[] = [
     recommendedRank: 3,
     performanceScore: 93,
     videos: [
-      {
-        type: "picture",
+      createPictureItem({
         title: "수익 창출 인증",
-        thumbnail: "/images/thumbnail/loony_1.png",
-        src: "/images/thumbnail/loony_1.png",
+        image: thumbnailAssets.loony1,
         date: "2026-01-30",
-      },
-      {
-        type: "picture",
+      }),
+      createPictureItem({
         title: "중간 성과 지표들",
-        thumbnail: "/images/thumbnail/loony_2.png",
-        src: "/images/thumbnail/loony_2.png",
+        image: thumbnailAssets.loony2,
         images: [
-          "/images/thumbnail/loony_2.png",
-          "/images/thumbnail/loony_3.png",
-          "/images/thumbnail/loony_4.png",
+          thumbnailAssets.loony2,
+          thumbnailAssets.loony3,
+          thumbnailAssets.loony4,
         ],
         date: "2026-02-02",
-      },
+      }),
       {
         type: "file",
         title: "Game vs Real",
-        thumbnail: "/images/thumbnail/loony_5.png",
+        thumbnail: thumbnailAssets.loony5,
         src: "https://rthww4xn4lzutlkr.public.blob.vercel-storage.com/Loonybloxy_1.mp4",
         date: "2026-01-21",
         contribution: "편집 100%, AI 100%",
@@ -176,7 +170,7 @@ export const channels: Channel[] = [
       {
         type: "file",
         title: "순수 창작 애니메이션",
-        thumbnail: "/images/thumbnail/loony_6.png",
+        thumbnail: thumbnailAssets.loony6,
         src: "https://rthww4xn4lzutlkr.public.blob.vercel-storage.com/Loonybloxy_2.mp4",
         date: "2026-01-21",
         note: "상용화 되어 있는 거의 모든 AI가 활용되었습니다.",
@@ -200,7 +194,7 @@ export const channels: Channel[] = [
       {
         type: "youtube",
         title: "블록블라스트(게임) 콜라보 콘텐츠",
-        thumbnail: "/images/thumbnail/parkholmes_1.jpg",
+        thumbnail: thumbnailAssets.parkholmes1,
         src: "https://youtube.com/shorts/5Cm-A5mAMxs?si=Sm9zDFjfcXWIjneF",
         date: "2025-11-28",
         contribution: "기여도: 편집 100%, AI: 100%",
@@ -209,28 +203,24 @@ export const channels: Channel[] = [
       {
         type: "youtube",
         title: "기본적인 AI 활용",
-        thumbnail: "/images/thumbnail/parkholmes_2.jpg",
+        thumbnail: thumbnailAssets.parkholmes2,
         src: "https://youtube.com/shorts/oRERVm9naOI?si=-cLTXXRTltRH7SQo",
         date: "2025-10-17",
         contribution: "기여도: 편집 100%, AI: 100%",
         note: "AI의 기본 Veo, Nanobanana 활용",
       },
-      {
-        type: "picture",
+      createPictureItem({
         title: "채널 인증",
-        thumbnail: "/images/thumbnail/parkholmes_3.png",
-        src: "/images/thumbnail/parkholmes_3.png",
+        image: thumbnailAssets.parkholmes3,
         date: "2026-02-17",
         note: "혹시 모를 채널 인증 백업",
-      },
-      {
-        type: "picture",
+      }),
+      createPictureItem({
         title: "데자와 브랜디드 콘텐츠",
-        thumbnail: "/images/thumbnail/parkholmes_4.png",
-        src: "/images/thumbnail/parkholmes_4.png",
+        image: thumbnailAssets.parkholmes4,
         date: "2026-02-06",
         note: "영상 제작 중인 모습",
-      },
+      }),
     ],
   },
   {
@@ -248,25 +238,23 @@ export const channels: Channel[] = [
       {
         type: "youtube",
         title: "순수 음원 콘텐츠",
-        thumbnail: "/images/thumbnail/trot_1.jpg",
+        thumbnail: thumbnailAssets.trot1,
         src: "https://youtu.be/r8xKwMRdTF4?si=_ZwMFBS4Oa5blynR",
         date: "2026-02-01",
       },
       {
         type: "youtube",
         title: "숏폼으로 캐릭터 AI(립싱크)",
-        thumbnail: "/images/thumbnail/trot_2.jpg",
+        thumbnail: thumbnailAssets.trot2,
         src: "https://youtube.com/shorts/KfuvKH-aDok?si=hTB7OAe7X9nkicxQ",
         date: "2026-02-12",
       },
-      {
-        type: "picture",
+      createPictureItem({
         title: "유튜브 채널 인증",
-        thumbnail: "/images/thumbnail/trot_3.png",
-        src: "/images/thumbnail/trot_3.png",
+        image: thumbnailAssets.trot3,
         date: "2026-02-17",
         note: "혹시 모를 채널 사진 백업",
-      },
+      }),
     ],
   },
   {
@@ -284,25 +272,23 @@ export const channels: Channel[] = [
       {
         type: "youtube",
         title: "게임 브랜디드 콘텐츠",
-        thumbnail: "/images/thumbnail/neoguri_1.jpg",
+        thumbnail: thumbnailAssets.neoguri1,
         src: "https://youtu.be/mCUtGaQ2SYE?si=KzQDQIMVpX_Fn6Lh",
         date: "2025-10-19",
       },
       {
         type: "youtube",
         title: "스토리텔링 콘텐츠",
-        thumbnail: "/images/thumbnail/neoguri_2.jpg",
+        thumbnail: thumbnailAssets.neoguri2,
         src: "https://youtube.com/shorts/1wXniXFzlPI?si=6bPzeIZh_GdeSNv6",
         date: "2025-06-04",
       },
-      {
-        type: "picture",
+      createPictureItem({
         title: "채널 인증",
-        thumbnail: "/images/thumbnail/neoguri_3.png",
-        src: "/images/thumbnail/neoguri_3.png",
+        image: thumbnailAssets.neoguri3,
         date: "2026-02-17",
         note: "혹시 모를 백업 사진",
-      },
+      }),
     ],
   },
   {
@@ -320,14 +306,14 @@ export const channels: Channel[] = [
       {
         type: "youtube",
         title: "런칭 캠페인 메이킹 필름",
-        thumbnail: "/images/thumbnail/mRf3-JkwqfU.svg",
+        thumbnail: thumbnailAssets.artistNoobMakingFilm,
         src: "mRf3-JkwqfU",
         date: "2025-08-22",
       },
       {
         type: "file",
         title: "캠페인 버티컬 컷",
-        thumbnail: "/images/thumbnail/file-placeholder.svg",
+        thumbnail: thumbnailAssets.filePlaceholder,
         src: "https://storage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4",
         date: "2025-07-11",
       },
@@ -348,7 +334,7 @@ export const channels: Channel[] = [
       {
         type: "file",
         title: "애프터이펙트 모션그래픽",
-        thumbnail: "/images/thumbnail/personal_1.jpg",
+        thumbnail: thumbnailAssets.personalMotionGraphic,
         src: "https://rthww4xn4lzutlkr.public.blob.vercel-storage.com/motion_graphic.mp4",
         date: "2026-02-15",
         note: "어떠한 플러그인도 사용하지 않고 100% 애프터이펙트로만 제작",
@@ -356,7 +342,7 @@ export const channels: Channel[] = [
       {
         type: "file",
         title: "AI를 활용한 브랜드 광고",
-        thumbnail: "/images/thumbnail/file-placeholder.svg",
+        thumbnail: thumbnailAssets.filePlaceholder,
         src: "https://storage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4",
         date: "2025-02-26",
         note: "Seedance를 활용한 브랜드 광고 제작",
